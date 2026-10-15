@@ -1,0 +1,23 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@layer base {
+  a {
+    scale: 1;
+    color: #ffb9e7;
+  }
+}
+
+a:hover {
+  scale: 1.2
+}
+
+.pfpImg {
+  transition: 200ms;
+}
+
+.pfpImg:hover {
+  transform: scale(1.025); 
+}
