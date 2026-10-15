@@ -10,7 +10,6 @@ export default function PostsList({
     posts: Promise<IPost[]>
 }) {
     const allPosts = use(posts);
-    console.log(posts);
 
     return (
         <Suspense fallback="Loading...">
