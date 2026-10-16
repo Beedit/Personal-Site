@@ -16,7 +16,7 @@ export default function Footer() {
                 {" "}
                 {new Date().getFullYear()}
                 {" "}
-                MIT Licensed
+                MPL v2.0 License
             </p>
         </footer>
     );
