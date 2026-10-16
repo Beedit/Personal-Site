@@ -2,19 +2,17 @@
 import type { IPost } from "../lib/interfaces/IPost";
 import Bar from "./Bar";
 import PostCard from "./PostCard";
-import { Suspense, use } from "react";
+import { Suspense } from "react";
 
 export default function PostsList({
     posts,
 }: {
-    posts: Promise<IPost[]>
+    posts: IPost[]
 }) {
-    const allPosts = use(posts);
-
     return (
         <Suspense fallback="Loading...">
             <ul>
-                {allPosts.map(post => (
+                {posts.map(post => (
                     <li key={post.id}><PostCard title={post.title} date={post.date} id={post.id} content="" /></li>
                 ))}
                 <Bar />
