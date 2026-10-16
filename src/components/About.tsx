@@ -16,10 +16,10 @@ export default function About() {
             <Bar />
             <br />
             <p className="mb-4">
-                Hi!, I&apos;m Pip!
+                Hi! I&apos;m Pip!
                 <br />
                 <br />
-                I&apos;m a ferret with a keyboard who happens to write a lot of Typecript x3
+                I&apos;m a ferret with a keyboard who happens to write a lot of Typescript x3
             </p>
             <div className="my-8">
             </div>
