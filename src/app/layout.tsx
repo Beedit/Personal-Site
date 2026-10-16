@@ -5,11 +5,16 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
+import favicon from "../public/image/favicon.ico";
+
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
     title: "Pip's Blog",
+    icons: {
+        icon: favicon.src,
+    },
 };
 
 export default function RootLayout({
