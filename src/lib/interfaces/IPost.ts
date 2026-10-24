@@ -1,6 +1,7 @@
+import type { MDXContent } from "mdx/types";
+import type { IMetadata } from "./IMetadata";
+
 export interface IPost {
-    date: string
-    content?: string
-    title: string
-    id: string
+    metadata: IMetadata
+    content?: MDXContent
 }

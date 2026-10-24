@@ -1,29 +1,31 @@
-import type { IPost } from "../lib/interfaces/IPost";
+"use client";
 import Bar from "./Bar";
 import SmallBar from "./SmallBar";
-import showdown from "showdown";
-import { JSDOM } from "jsdom";
-import DOMPurify from "dompurify";
+import type { IMetadata } from "../lib/interfaces/IMetadata";
+import type { Element } from "mdx/types";
+import { useEffect } from "react";
+import hljs from "highlight.js";
+import "highlight.js/styles/github-dark.css";
 
-const window = new JSDOM("").window;
-const purify = DOMPurify(window);
+export default function Post({ metadata, content }: { metadata: IMetadata, content: Element }) {
+    useEffect(() => {
+        hljs.highlightAll();
+    });
 
-const converter = new showdown.Converter();
-
-export default function Post({ title, date, content }: IPost) {
     return (
         <>
             <Bar />
             <h1>
-                {title}
+                {metadata.title}
             </h1>
             <h4>
-                {date}
+                {metadata.date}
             </h4>
             <SmallBar />
             <br />
-            <p className="text-base/8" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: purify.sanitize(converter.makeHtml(String(content).replaceAll("\n", "\n<br>"))) }}>
-            </p>
+            <div className="text-base/8">
+                {content}
+            </div>
             <br />
             <Bar />
         </>

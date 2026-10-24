@@ -21,3 +21,25 @@ a:hover {
 .pfpImg:hover {
   transform: scale(1.025); 
 }
+
+p {
+  display: block; 
+  content: ""; 
+  margin-top: 2rem; 
+}
+
+pre {
+  display: block; 
+  content: ""; 
+  margin-top: 2rem;
+}
+
+h2 {
+  display: block; 
+  content: ""; 
+  margin-top: 2rem;
+}
+
+code {
+  border-radius: 2%;
+}

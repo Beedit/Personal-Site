@@ -7,7 +7,7 @@ export default function Footer() {
                 <li>
                     <a className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100" rel="noopener noreferrer" target="_blank" href="https://github.com/beedit/Personal-Site">
                         <HeartIcon />
-                        <p className="ml-2 h-7">view source</p>
+                        <div className="ml-2 h-7">view source</div>
                     </a>
                 </li>
             </ul>

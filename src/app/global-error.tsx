@@ -1,11 +1,6 @@
 "use client";
 
-interface GlobalErrorProps {
-    error: Error & { digest?: string }
-    reset: () => void
-}
-
-const GlobalError = ({ error, reset }: GlobalErrorProps) => {
+const GlobalError = () => {
     return (
         <html lang="en" className="text-black bg-white dark:text-white dark:bg-[#332a2e]">
             <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import type { IPost } from "../lib/interfaces/IPost";
 import Bar from "./Bar";
+import type { IMetadata } from "../lib/interfaces/IMetadata";
 
-export default function PostCard({ title, date, id }: IPost) {
+export default function PostCard({ title, date, id }: IMetadata) {
     return (
         <Link href={`blog/${id}`} className="drop-shadow-none">
             <Bar />

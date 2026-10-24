@@ -1,5 +1,5 @@
 "use client";
-import type { IPost } from "../lib/interfaces/IPost";
+import type { IMetadata } from "../lib/interfaces/IMetadata";
 import Bar from "./Bar";
 import PostCard from "./PostCard";
 import { Suspense } from "react";
@@ -7,13 +7,13 @@ import { Suspense } from "react";
 export default function PostsList({
     posts,
 }: {
-    posts: IPost[]
+    posts: IMetadata[]
 }) {
     return (
         <Suspense fallback="Loading...">
             <ul>
                 {posts.map(post => (
-                    <li key={post.id}><PostCard title={post.title} date={post.date} id={post.id} content="" /></li>
+                    <li key={post.id}><PostCard title={post.title} date={post.date} id={post.id} /></li>
                 ))}
                 <Bar />
             </ul>

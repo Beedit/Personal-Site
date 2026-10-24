@@ -13,11 +13,13 @@ export default async function Page({
     const postID = decodeURI((await params).id);
     const post = await getPostFromID(postID);
 
-    if (post) {
+    if (post && post.content) {
         return (
-            <Suspense fallback={<div> Loading... </div>}>
-                <Post title={post.title} content={post.content} id={post.id} date={post.date} />
-            </Suspense>
+            <>
+                <Suspense fallback={<div> Loading... </div>}>
+                    <Post metadata={post.metadata} content={post.content({})} />
+                </Suspense>
+            </>
         );
     }
     else {
